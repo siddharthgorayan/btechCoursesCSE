@@ -1,6 +1,3 @@
-# language-manual-iiitr2
-language-manual-iiitr2 created by GitHub Classroom
-
 # Language Manual
 # Name of the Language: DevaN
     We derived the name of our programming language from Devanagari Script on which Hindi Language is based.
