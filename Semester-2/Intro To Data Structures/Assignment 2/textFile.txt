@@ -1,0 +1,43 @@
+
+<---------------------------------- IMPORTANT ------------------------------------->
+
+1. For implementing the functions given in the assignment, we use 3 basic functions that are used repeatedly:
+    1. nodeForQueue : created a new node with given integer value in it.
+    2. printQueue : prints the elements of the queue.
+    3. sizeOfQueue : returns the size of the queue as integer.
+
+2. Note that these functions can't be declared in the queue-interface.h file as they are hidden from the progammer using queue-interface.h file.
+    So, these functions are declared in the queue-test.c file at the top.
+    
+3. The case when the queue is empty and can't execute certain functions has be taken care in the main function inside queue-test.c file rather than in the respective functions; Except for the case in Enqueue and Dequeue.
+
+<---------------------------------------------------------------------------------->
+
+<---------------------------------- FUNCTIONS ------------------------------------->
+
+4. CREATE_QUEUE: creates an empty queue, and hence points the end and the front pointer of the queue to NULL since it doesn't has any nodes.
+
+5. ENQUEUE: creates a new node and inserts it into the queue by pointing:
+    1. if queue was empty: end and front pointer to the nnewNode; and, next and prev pointers to NULL.
+    2. if queue wasn't empty: only end pointer to the new node and next pointer to NULL and prev pointer to prev node.
+    
+6. DEQUEUE: deletes the front node by storing the data of front node in temp and making the node next to the front node as the front node. Then:
+    1. if queue becomes empty after removing front, make the end also NULL. The queue becomes empty.
+    2. or else, make the prev of the new front node as NULL.
+    
+7. IS_EMPTY: return 1 if queue is empty and 0 if not by checking if the front node of the queue points to NULL or not.
+
+8. TOP: returns the value of the top-most element of the queue, that is the front element.
+
+9. CLONE_QUEUE: copies a queue by copying the values of each node. it first create a new empty queue, create "new" pointer to make new nodes in loop and "temp" to traverse the queue and copy data. Then it makes the first node as the front and last initially, in case there's only one node. If there are more nodes, temp traverse the loop and copies data to newQueue and then points the pointers accordingly to make double linked.
+
+10. SORT_QUEUE: sorts the queue with the front of the queue as the minimum and end as the maximum value. temp is used to traverse through the loop and min is used to store the minimum value after each iteration. the minimum values are pushed to the front after consecutive enqueue and dequeue by initialising the temp and the min to the front node everytime after one iteration of outer loop. The inner loop traverses from the front node to the prev of sorted nodes and replaces the min with temp if temp<min. after the end of each iteration of the inner loop:
+    1. inserts min-value at the end of the queue.
+    2. cpoies frond-node-value to the min-value.
+    3. deletes the front node.
+    
+11. PLAY_QUEUE: returns the position of the player who is seeker. if the queue has only one element, then the only player is player 1 and he is the seeker. otherwise, we clone the queue to make other identical queue and change the values of each node to their respective positions. then we make the queue circular by joinng the front and end of the queue. we traverse through the queue k times and removes the kth element each time until we are left with only one element in the queue which is the seeker.
+
+12. REMOVE_DUPLICATES: remove the duplicate values from the queue. we keep a pointer: "temp" on front element of queue and traverses to the whole queue using another pointer: "check". if we find the value of any element under check equal to that of the value under "temp", we store that duplicate into "store" and changes the pointers of the nodes next and prev to check such that check is no more in the queue and then we delete that node by pointing store to NULL. we repeat the above steps each time making temp to temp->next.
+
+<---------------------------------------------------------------------------------->
