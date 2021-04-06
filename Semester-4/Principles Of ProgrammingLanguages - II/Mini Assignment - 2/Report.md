@@ -181,3 +181,50 @@ Ref1: [Tooling.h](https://github.com/llvm/llvm-project/blob/main/clang/include/c
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
+## V. Usage of Iterators and their Own Data Structures
+
+### 1. begin, end - Iterators
+
+Ref1: [SmallVector.h](https://github.com/llvm/llvm-project/blob/main/llvm/include/llvm/ADT/SmallVector.h)
+
+![](Images/18.png)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+### 2. rbegin, rend - Reverse Iterators 
+
+Ref1: [SmallVector.h](https://github.com/llvm/llvm-project/blob/main/llvm/include/llvm/ADT/SmallVector.h)
+
+![](Images/19.png)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+### 3. reverse_iterator, const_reverse_iterator, const_iterator
+
+Ref1: [SmallVector.h](https://github.com/llvm/llvm-project/blob/main/llvm/include/llvm/ADT/SmallVector.h)
+
+![](Images/20.png)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+### 4. DerivedT, WrappediteratorT - Iterators
+
+Ref1[iterator.h](https://github.com/llvm/llvm-project/blob/main/llvm/include/llvm/ADT/iterator.h)
+
+![](Images/22.png)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+### 5. Data Structures:
+
+* APFloatBase:
+
+Ref1: [APFloat.h](https://github.com/llvm/llvm-project/blob/main/llvm/include/llvm/ADT/APFloat.h)
+
+![](Images/21.png)
+
+* Many of the classes are also the user defined data structures.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
