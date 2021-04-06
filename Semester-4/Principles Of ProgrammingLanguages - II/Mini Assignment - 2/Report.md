@@ -5,20 +5,20 @@ A friend class can access private and protected members of other classes in whic
 
 Ref1: [FrontendAction.h](https://github.com/llvm/llvm-project/blob/main/clang/include/clang/Frontend/FrontendAction.h)
 
------ spcae for image -----
+![](Images/1.png)
 
 Here, the classes - ASTMergeAction and WrappedFrontendAction would have access to the private and protected members of FrontendAction class.
 
 Ref2: [Decl.h](https://github.com/llvm/llvm-project/blob/main/clang/include/clang/AST/Decl.h)
 
------ space for image ----- 
+![](Images/2.png)
 
 Here, the classes - ASTDeclReader and ASTDeclWrited would have access to the private and protected members of the class PragmaCommentDecl.
 
 
 Ref 3: [ASTConsumer.h](https://github.com/llvm/llvm-project/blob/main/clang/include/clang/AST/ASTConsumer.h)
 
------ space for image -----
+![](Images/3.png)
 
 Here, the class - SemaConsumer will have access to the private and protected members of the ASTConsumer class.
 
@@ -29,7 +29,9 @@ When we don’t know about the implementation of any function in the base class,
 
 Ref1: [FrontEndAction.h](https://github.com/llvm/llvm-project/blob/main/clang/include/clang/Frontend/FrontendAction.h)
 
------ space for image -----
+![](Images/4.png)
+![](Images/5.png)
+![](Images/6.png)
 
 There are 3 classes as can be seen above. ASTFrontendAction is derived from FrontendAction and PluginASTAction is derived from ASTFrontendAction.
 Here, FrontendAction and ASTFrontendAction are the Abstract Base Classes.
@@ -41,7 +43,7 @@ When we don’t want a derived class to override the virtual function of a base 
 
 Ref1: [Decl.h](https://github.com/llvm/llvm-project/blob/main/clang/include/clang/AST/Decl.h)
 
------ space for image -----
+![](Images/7.png)
 
 Here, PragmaCommentDecl will not override the virtual function of the Decl class.
 
@@ -52,7 +54,7 @@ To avoid the implicit conversion of the constructor to a conversion constructor,
 
 Ref1: [Decl.h](https://github.com/llvm/llvm-project/blob/main/clang/include/clang/AST/Decl.h)
 
------ space for image -----
+![](Images/8.png)
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -62,7 +64,7 @@ When the inline functions are called, whole code of the inline function gets ins
 
 Ref1: [Decl.h](https://github.com/llvm/llvm-project/blob/main/clang/include/clang/AST/Decl.h)
 
------ space for image -----
+![](Images/9.png)
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -71,7 +73,7 @@ A virtual function is a member function which is declared within a base class an
 
 Ref1: [Decl.h](https://github.com/llvm/llvm-project/blob/main/clang/include/clang/AST/Decl.h)
 
------ space for image -----
+![](Images/10.png)
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -80,13 +82,13 @@ We have seen class hierarchy throughout the project, but here we are going to sh
 
 Ref1: [Attr.h](https://github.com/llvm/llvm-project/blob/main/clang/include/clang/AST/Attr.h)
 
------space for image-----
+![](Images/11.png)
 
 The types of hierarchy used in the above Diagram are Single Inheritance and Hierarchial Inheritance which are together bound with Multi-Level Inheritance as shown above.
 
 Ref2: [Decl.h](https://github.com/llvm/llvm-project/blob/main/clang/include/clang/AST/Decl.h)
 
------space for image-----
+![](Images/12.png)
 
 The above diagram shown a more complex hierarchy of classes.
 The types of hierarchy used in the above Diagram are Single Inheritance, Hierarchial Inheritance, Multiple Inheritance and Hybrid Inheritance which are together bound with Multi-Level Inheritance as shown above.
