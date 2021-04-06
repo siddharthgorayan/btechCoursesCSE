@@ -1,5 +1,5 @@
 # Report
-## C++11 / C++14 Features Used
+## I. C++11 / C++14 Features Used
 ### 1. Friend Class:
 A friend class can access private and protected members of other classes in which it is declared as a friend.
 
@@ -77,20 +77,71 @@ Ref1: [Decl.h](https://github.com/llvm/llvm-project/blob/main/clang/include/clan
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
-## Class Hierarchy
+## II. Class Hierarchy
 We have seen class hierarchy throughout the project, but here we are going to show you some complex as well as simple class hierarchies to explain the concepts of class hierarchy and inheritance used in the project.
 
 Ref1: [Attr.h](https://github.com/llvm/llvm-project/blob/main/clang/include/clang/AST/Attr.h)
 
 ![](Images/11.png)
 
-The types of hierarchy used in the above Diagram are Single Inheritance and Hierarchial Inheritance which are together bound with Multi-Level Inheritance as shown above.
+The types of inheritance used in the above Diagram are Single Inheritance and Hierarchial Inheritance which are together bound with Multi-Level Inheritance as shown above.
 
 Ref2: [Decl.h](https://github.com/llvm/llvm-project/blob/main/clang/include/clang/AST/Decl.h)
 
 ![](Images/12.png)
 
 The above diagram shown a more complex hierarchy of classes.
-The types of hierarchy used in the above Diagram are Single Inheritance, Hierarchial Inheritance, Multiple Inheritance and Hybrid Inheritance which are together bound with Multi-Level Inheritance as shown above.
+The types of inheritance used in the above Diagram are Single Inheritance, Hierarchial Inheritance, Multiple Inheritance and Hybrid Inheritance which are together bound with Multi-Level Inheritance as shown above.
 
-## OOP Design Desicions for LLVM:
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+## III. OOP Design Desicions for LLVM:
+### 1. Information Hiding:
+The most useful and important feature of OOP / C++ is information hiding, which is wisely used in the LLVM Project, where many components/members have been protected by external entities inside a class, using the keywords like private and protected.
+
+Ref1: [ASTVector.h](https://github.com/llvm/llvm-project/blob/main/clang/include/clang/AST/ASTVector.h)
+
+![](Images/13.png)
+
+
+Ref2: 
+[DeclGroup.h](https://github.com/llvm/llvm-project/blob/main/clang/include/clang/AST/DeclGroup.h)
+
+![](Images/14.png)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+### 2. Inheritance:
+Inheritance is the most important feature of OOP / C++ by which a class can derive the properties from another class. Rather than defining the same properties for a number of classes again and again, we can let the classes inherit from a common base class.
+This reduces the chances of error and data redundancy.
+
+Inheritance of classes is extensively used in LLVM Project as Explained above.
+
+Ref2: [Decl.h](https://github.com/llvm/llvm-project/blob/main/clang/include/clang/AST/Decl.h)
+
+![](Images/12.png)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+### 3. Polymorphism:
+Polymorphism is another important feature of OOP by which we can have an object or a class having multiple forms.
+In the LLVM project, polymorphism is used in the form of Virtual Functions, which comes under the category of Run Time polymorphism.
+
+Ref1: [Decl.h](https://github.com/llvm/llvm-project/blob/main/clang/include/clang/AST/Decl.h)
+
+![](Images/10.png)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+### 4. Interface:
+Interface describes the behaviour and capabilities of a class in OOP, without committing to a particular implementation of that class.
+Interface is also widely used in the LLVM Project using the Abstract Classes as explained above in the C++ Features sections.
+
+Ref1: [FrontEndAction.h](https://github.com/llvm/llvm-project/blob/main/clang/include/clang/Frontend/FrontendAction.h)
+
+![](Images/4.png)
+![](Images/5.png)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
