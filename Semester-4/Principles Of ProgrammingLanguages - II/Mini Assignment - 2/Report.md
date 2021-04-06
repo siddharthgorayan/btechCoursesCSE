@@ -149,12 +149,13 @@ The LLVM project has used all the 3 subcategories of the design pattern viz Crea
 
 ### 1. Factory Method:
 It belongs to the Creational Pattern of the Design Patterns.
+
 Define an interface for creating a single object, but let subclasses decide which class to instantiate. It lets a class defer instantiation to subclasses.
 
 
 Ref1: [Tooling.h](https://github.com/llvm/llvm-project/blob/main/clang/include/clang/Tooling/Tooling.h)
 
---- Space for image --- 
+![](Images/15.png)
 
 As explained above in the comments, having a factory interface allows a new FrontendAction to be created for each translation unit processed by ClangTool.
 
@@ -162,6 +163,7 @@ As explained above in the comments, having a factory interface allows a new Fron
 
 ### 2. Visitor:
 It belongs to the Behavioural Pattern of the Design Patterns.
+
 It represents an operation to be performed on the elements of an object structure. Visitor lets a new operation be defined without changing the classes of the elements on which it operates.
 
 Ref1: [Tooling.h](https://github.com/llvm/llvm-project/blob/main/clang/include/clang/Tooling/Tooling.h)
@@ -170,11 +172,12 @@ Ref1: [Tooling.h](https://github.com/llvm/llvm-project/blob/main/clang/include/c
 
 ### 3. Adapter: 
 It belongs to the Structural Pattern of the Design Patterns.
-It converts the interface of a class into another interface clients expect. An adapter lets classes work together that could not otherwise because of incompatible interfaces.
+
+It converts the interface of a class into another interface clients expect. It lets classes work together that could not otherwise because of incompatible interfaces.
 
 Ref1: [Tooling.h](https://github.com/llvm/llvm-project/blob/main/clang/include/clang/Tooling/Tooling.h)
 
---- Space For Image ---
+![](Images/17.png)
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
