@@ -150,7 +150,7 @@ The LLVM project has used all the 3 subcategories of the design pattern viz Crea
 ### 1. Factory Method:
 It belongs to the Creational Pattern of the Design Patterns.
 
-Define an interface for creating a single object, but let subclasses decide which class to instantiate. It lets a class defer instantiation to subclasses.
+It defines an interface for creating a single object, but let subclasses decide which class to instantiate. It lets a class defer instantiation to subclasses.
 
 
 Ref1: [Tooling.h](https://github.com/llvm/llvm-project/blob/main/clang/include/clang/Tooling/Tooling.h)
